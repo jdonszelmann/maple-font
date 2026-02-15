@@ -289,13 +289,13 @@ def get_lookup(cls_var: ast.Clazz):
                 # ("_bug_", "[bug]"),  # type `_bug_`, get `bug` tag in square style
                 # ("_noqa_", "(noqa)"),  # type `_noqa_`, get `noqa` tag in rounded style
                 # (":test:", "<test>"),  # type `:test:`, get `test` tag in sharp style
-                ("TODO(", "[TODO]"),
-                ("FIXME(", "[FIXME]"),
-                ("todo(", "[TODO]"),
-                ("fixme(", "[FIXME]"),
+                # ("TODO(", "[TODO]"),
+                # ("FIXME(", "[FIXME]"),
+                # ("todo(", "[TODO]"),
+                # ("fixme(", "[FIXME]"),
                 ("ERROR ", "[ERROR]"),
-                ("WARN  ", "[WARN]"),
-                ("NOTE  ", "[NOTE]"),
+                ("WARN ", "[WARN]"),
+                ("NOTE ", "[NOTE]"),
             ],
             bg_cls_dict,
         ),
