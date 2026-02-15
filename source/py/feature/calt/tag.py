@@ -170,7 +170,11 @@ def tag_custom(
         source_list = []
         for g in glyphs:
             if g.isalpha():
-                source_list.append(f"@{g.upper()}")
+                if g.upper() == g:
+                    source_list.append(f"@U")
+                    source_list.append(f"@{g.upper()}")
+                else:
+                    source_list.append(f"@{g.upper()}")
             else:
                 source_list.append(ast.gly(g))
 
