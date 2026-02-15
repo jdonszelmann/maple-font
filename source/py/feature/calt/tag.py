@@ -157,14 +157,14 @@ def tag_custom(
         glyphs_len = len(glyphs)
         target_len = len(target)
 
-        if target_len != glyphs_len:
-            raise ValueError(
-                f"length of `content` ({glyphs_len}) must be equal to length of `target` ({target_len})."
-            )
-        if target[-1] not in __map:
-            raise ValueError(
-                f"Last letter of `target` must in {list(__map.keys())}, current is '{target[-1]}'"
-            )
+        # if target_len != glyphs_len:
+        #     raise ValueError(
+        #         f"length of `content` ({glyphs_len}) must be equal to length of `target` ({target_len})."
+        #     )
+        # if target[-1] not in __map:
+        #     raise ValueError(
+        #         f"Last letter of `target` must in {list(__map.keys())}, current is '{target[-1]}'"
+        #     )
 
         # Parse source
         source_list = []
