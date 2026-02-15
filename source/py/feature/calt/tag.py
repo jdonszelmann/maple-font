@@ -246,7 +246,7 @@ def tag_suffix_colon(text_list: list[str]):
             ast.subst_liga(
                 source=f"{text.upper()}:",
                 target=f"tag_{text}.liga",
-                lookup_name=f"{text}_colon",
+                lookup_name=lookup_name,
             )
         )
     return result
