@@ -293,13 +293,11 @@ def get_lookup(cls_var: ast.Clazz):
                 "todo",
                 "fixme",
                 "note",
-                "help",
 
                 # rustc tests
                 "ERROR",
                 "WARN",
                 "NOTE",
-                "HELP",
             ]
         ),
         # =========================================================
