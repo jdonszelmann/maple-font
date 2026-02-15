@@ -237,7 +237,7 @@ def tag_suffix_colon(text_list: list[str]):
         lookup_name = ""
         for g in "{orig_text}_colon":
             if g.upper() == g:
-                lookup_name += "U"
+                lookup_name += "u"
                 lookup_name += f"{g.lower()}"
             else:
                 lookup_name += f"{g.lower()}"
