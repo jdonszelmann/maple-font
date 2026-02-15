@@ -227,12 +227,20 @@ def tag_custom(
 
 def tag_suffix_colon(text_list: list[str]):
     result = []
-    for text in text_list:
-        text = text.lower()
+    for orig_text in text_list:
+        text = orig_text.lower()
         if text not in built_in_tag_text:
             raise Exception(
                 f"tag with suffix `:` must be in {built_in_tag_text}, but '{text}' is not"
             )
+
+        lookup_name = ""
+        for g in "{orig_text}_colon":
+            if g.upper() == g:
+                lookup_name += "U"
+                lookup_name += f"{g.lower()}"
+            else:
+                lookup_name += f"{g.lower()}"
 
         result.append(
             ast.subst_liga(
