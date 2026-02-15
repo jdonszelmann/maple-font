@@ -288,7 +288,13 @@ def get_lookup(cls_var: ast.Clazz):
         # ---------------------------------------------------------
         tag_suffix_colon(
             [
-                "BUG",
+                "TODO",
+                "FIXME",
+                "todo",
+                "fixme",
+                "note",
+                "help",
+
                 # rustc tests
                 "ERROR",
                 "WARN",
