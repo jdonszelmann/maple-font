@@ -235,12 +235,15 @@ def tag_suffix_colon(text_list: list[str]):
             )
 
         lookup_name = ""
-        for g in "{orig_text}_colon":
-            if g.upper() == g:
-                lookup_name += "u"
-                lookup_name += f"{g.lower()}"
+        for g in f"{orig_text}_colon":
+            if g.isalpha():
+                if g.upper() == g:
+                    lookup_name += "u"
+                    lookup_name += f"{g.lower()}"
+                else:
+                    lookup_name += f"{g.lower()}"
             else:
-                lookup_name += f"{g.lower()}"
+                lookup_name += g
 
         result.append(
             ast.subst_liga(
